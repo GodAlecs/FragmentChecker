@@ -33,7 +33,7 @@ def check_user(username):
     username = username.strip()
     r = requests.get(f"https://fragment.com/username/{username}", allow_redirects=False) #  Controlla se l'username è in asta
     response = str(r.text).split('\n')
-    if len(response) == 366:
+    if len(response) != 1:
         print(f"{Fore.GREEN}[+]{Fore.RESET} {username} è possibile acquistarlo su fragment.com")
     else:
         print(f"{Fore.RED}[-]{Fore.RESET} {username} non è possibile acquistarlo su fragment.com")
