@@ -68,5 +68,5 @@ def main():
         exit() #    Finisce il programma
     print() #   Spazio vuoto
     for username in wordlist_file.readlines():
-        check_user(username)
+        check_user(username.lower())
 main() #    Richiama classe Main
