@@ -69,4 +69,5 @@ def main():
     print() #   Spazio vuoto
     for username in wordlist_file.readlines():
         check_user(username.lower())
-main() #    Richiama classe Main
+if __name__ == "__main__":
+    main() #    Richiama classe Main
